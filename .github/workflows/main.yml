@@ -1,15 +1,14 @@
 name: main
 
-on : ["push"]
+on: ["push"]
 
 jobs:
-
   test_job:
     runs_on: ubuntu-latest
 
     steps:
-      -uses: actions/checkout@v3
-      -uses: actions/setup-python@v4
-       with: 
-        python-version: '3.10'
-      -run: python3 ./scripts/hello.py
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with: 
+          python-version: '3.10'
+      - run: python3 ./scripts/hello.py
